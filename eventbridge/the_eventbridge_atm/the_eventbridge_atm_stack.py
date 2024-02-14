@@ -17,7 +17,7 @@ class TheEventbridgeAtmStack(core.Stack):
         # Producer Lambda
         #
         atm_producer_lambda = _lambda.Function(self, "atmProducerLambda",
-                                               runtime=_lambda.Runtime.NODEJS_18_X,
+                                               runtime=_lambda.Runtime.NODEJS_16_X,
                                                handler="handler.lambdaHandler",
                                                code=_lambda.Code.from_asset("lambda_fns/atmProducer")
                                                )
@@ -30,7 +30,7 @@ class TheEventbridgeAtmStack(core.Stack):
         # Approved Transaction Consumer
         #
         atm_consumer1_lambda = _lambda.Function(self, "atmConsumer1Lambda",
-                                                runtime=_lambda.Runtime.NODEJS_18_X,
+                                                runtime=_lambda.Runtime.NODEJS_16_X,
                                                 handler="handler.case1Handler",
                                                 code=_lambda.Code.from_asset("lambda_fns/atmConsumer")
                                                 )
@@ -49,7 +49,7 @@ class TheEventbridgeAtmStack(core.Stack):
         # NY Prefix Consumer
         #
         atm_consumer2_lambda = _lambda.Function(self, "atmConsumer2Lambda",
-                                                runtime=_lambda.Runtime.NODEJS_18_X,
+                                                runtime=_lambda.Runtime.NODEJS_16_X,
                                                 handler="handler.case2Handler",
                                                 code=_lambda.Code.from_asset("lambda_fns/atmConsumer")
                                                 )
@@ -67,7 +67,7 @@ class TheEventbridgeAtmStack(core.Stack):
         # Not Approved Consumer
         #
         atm_consumer3_lambda = _lambda.Function(self, "atmConsumer3Lambda",
-                                                runtime=_lambda.Runtime.NODEJS_18_X,
+                                                runtime=_lambda.Runtime.NODEJS_16_X,
                                                 handler="handler.case3Handler",
                                                 code=_lambda.Code.from_asset("lambda_fns/atmConsumer")
                                                 )
