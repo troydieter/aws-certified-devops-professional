@@ -55,7 +55,7 @@ Resources:
         Fn::GetAtt:
           - atmProducerLambdaServiceRoleEF3D6079
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
     DependsOn:
       - atmProducerLambdaServiceRoleDefaultPolicy984C4CFE
       - atmProducerLambdaServiceRoleEF3D6079
@@ -104,7 +104,7 @@ Resources:
         Fn::GetAtt:
           - atmConsumer1LambdaServiceRole70132707
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
     DependsOn:
       - atmConsumer1LambdaServiceRole70132707
     Metadata:
@@ -188,7 +188,7 @@ Resources:
         Fn::GetAtt:
           - atmConsumer2LambdaServiceRole130B888D
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
     DependsOn:
       - atmConsumer2LambdaServiceRole130B888D
     Metadata:
@@ -271,7 +271,7 @@ Resources:
         Fn::GetAtt:
           - atmConsumer3LambdaServiceRoleCF9BAEA7
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
     DependsOn:
       - atmConsumer3LambdaServiceRoleCF9BAEA7
     Metadata:
